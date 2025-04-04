@@ -1,0 +1,31 @@
+<h1>Pictrs Mini</h1>
+<p class="lead" style="max-width: 30em">
+  This is a little Ruby on Rails 8 demo project.<br />
+  It handles image uploads with an optional name. After uploading
+  images you can switch the view mode between 🌈 color and
+  🏁 grayscale mode.
+</p>
+
+<div class="card" style="max-width: 32em">
+  <div class="card-body">
+    <h5 class="card-title">Histograms</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">With image color data detection</h6>
+    <p class="card-text mb-2">
+      In the detail view of an image you can see a histogram graph.
+    </p>
+    <p class="card-text mb-2">
+      The datasets depend on the image data. For grayscale pictures
+      there are no red, green and blue datasets, only one for the
+      brightness. For other images all color channels are enabled, but
+      the brightness will be hidden by default.
+    </p>
+    <p class="card-text mb-2">
+      If there is any alpha channel data detected, there will be an
+      extra dataset.
+    </p>
+    <p class="card-text mb-2">
+      Datasets can be enabled and disabled by clicking onto the
+      label.
+    </p>
+  </div>
+</div>

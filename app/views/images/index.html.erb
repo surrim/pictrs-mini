@@ -1,0 +1,22 @@
+<% content_for :title, "Images" %>
+
+<h1>Images</h1>
+
+<table id="images" class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <th scope="row"><%= link_to image.name, image %></td>
+        <td><%= link_to image_tag(image.file.variant(:thumbnail)), image.file.variant(:original) if image.file.representable? %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New image", new_image_path, class: "btn btn-secondary" %>

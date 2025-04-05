@@ -1,0 +1,5 @@
+<% content_for :title, "Image #{@image.name}" %>
+
+<%= render @image %>
+
+<%= link_to "New image", new_image_path, class: "btn btn-secondary" %>

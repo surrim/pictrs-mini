@@ -1,7 +1,7 @@
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold"><%= image.name %></h1>
-    <p class="col-md-8 fs-4"><%= link_to image_tag(image.file.variant(:large)), image.file.variant(:original) if image.file.representable? %></p>
+    <p class="col-md-8 fs-4"><%= link_img(image, :large) %></p>
     <%= link_to "Edit", edit_image_path(image), class: "btn btn-primary btn-lg" %>
     <%= link_to 'Remove', image, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-secondary btn-lg" %>
   </div>

@@ -13,6 +13,11 @@
           <%= link_to "About", home_about_path, class: "nav-link" %>
         </li>
       </ul>
+      <select id="view-mode" class="form-select w-auto" aria-label="View mode">
+        <% ApplicationHelper::VIEW_MODES.each do |id, name| %>
+          <option value="<%= id %>"><%= name %></option>
+        <% end %>
+      </select>
     </div>
   </div>
 </nav>

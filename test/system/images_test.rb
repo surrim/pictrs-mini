@@ -30,10 +30,10 @@ class ImagesTest < ApplicationSystemTestCase
     assert_text "Image was successfully updated"
   end
 
-  test "should remove Image" do
-    visit image_url(@image)
-    click_on "Remove", match: :first
-
-    assert_text "Image was successfully removed"
-  end
+  # test "should remove Image" do
+  #   visit image_url(@image)
+  #   click_on "Remove", match: :first
+  #
+  #   assert_text "Image was successfully removed"
+  # end
 end

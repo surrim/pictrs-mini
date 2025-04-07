@@ -10,13 +10,15 @@ module ImagesHelper
 
   def link_img(image, variant = :thumbnail)
     if image.file.representable?
-      link_to image_tag(
-        image.file.variant(**DEFAULT_OPTIONS, **variant_options(variant), **view_options), class: "img-fluid"
-      ), image.file.variant(**DEFAULT_OPTIONS, **view_options)
+      link_to img_variant_tag(image, variant), img_variant_url(image)
     end
   end
 
-  def img_url(image, variant = nil)
+  def img_variant_tag(image, variant = :thumbnail)
+    image_tag image.file.variant(**DEFAULT_OPTIONS, **variant_options(variant), **view_options), class: "img-fluid"
+  end
+
+  def img_variant_url(image, variant = nil)
     url_for(image.file.variant(**DEFAULT_OPTIONS, **variant_options(variant), **view_options))
   end
 

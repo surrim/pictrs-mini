@@ -13,7 +13,7 @@
     <% @images.each do |image| %>
       <tr>
         <th scope="row"><%= link_to image.name, image %></td>
-        <td><%= link_img(image) %></td>
+        <td><%= link_to img_variant_tag(image), image %></td>
       </tr>
     <% end %>
   </tbody>

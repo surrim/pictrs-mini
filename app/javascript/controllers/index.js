@@ -2,4 +2,5 @@
 import { application } from "controllers/application"
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 eagerLoadControllersFrom("controllers", application)
+import "controllers/histogram"
 import "controllers/view_switcher"

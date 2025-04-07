@@ -2,6 +2,7 @@
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold"><%= image.name %></h1>
     <p class="col-md-8 fs-4"><%= link_img(image, :large) %></p>
+    <canvas width="600" height="120" data-histogram-src="<%= img_url image %>"></canvas>
     <%= link_to "Edit", edit_image_path(image), class: "btn btn-primary btn-lg" %>
     <%= link_to 'Remove', image, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-secondary btn-lg" %>
   </div>

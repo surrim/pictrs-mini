@@ -15,7 +15,9 @@ module ImagesHelper
   end
 
   def img_variant_tag(image, variant = :thumbnail)
-    image_tag image.file.variant(**DEFAULT_OPTIONS, **variant_options(variant), **view_options), class: "img-fluid"
+    if image.file.representable?
+      image_tag image.file.variant(**DEFAULT_OPTIONS, **variant_options(variant), **view_options), class: "img-fluid"
+    end
   end
 
   def img_variant_url(image, variant = nil)

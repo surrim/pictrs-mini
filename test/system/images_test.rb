@@ -18,7 +18,6 @@ class ImagesTest < ApplicationSystemTestCase
     click_on "Create Image"
 
     assert_text "Image was successfully created"
-    click_on "Back"
   end
 
   test "should update Image" do
@@ -29,7 +28,6 @@ class ImagesTest < ApplicationSystemTestCase
     click_on "Update Image"
 
     assert_text "Image was successfully updated"
-    click_on "Back"
   end
 
   test "should remove Image" do

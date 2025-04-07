@@ -1,5 +1,7 @@
 # Pictrs Mini
 
+![Preview](https://raw.githubusercontent.com/surrim/pictrs-mini/master/preview.webp)
+
 This is a little demo project which shows some basics of [Ruby on Rails](https://rubyonrails.org/) 8, [ActiveRecord](https://guides.rubyonrails.org/active_record_basics.html), mixed with [Bootstrap](https://getbootstrap.com/) 5.3, [Chart.js](https://www.chartjs.org/) 4.4 and some custom JavaScript for view mode switching and histograms.
 
 ## Quick installation
